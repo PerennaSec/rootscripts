@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#* Sign ALL FILES on a system for use with Integrity Measurement Architecture *#
+
 find  /bin -fstype ext4 -type f -uid 0 -executable -exec evmctl ima_sign -a sha512 -k /etc/MY/efikeys/DB.key '{}' \;
 find  /etc -fstype ext4 -type f -uid 0 -executable -exec evmctl ima_sign -a sha512 -k /etc/MY/efikeys/DB.key '{}' \;
 find  /lib -fstype ext4 -type f -uid 0 -executable -exec evmctl ima_sign -a sha512 -k /etc/MY/efikeys/DB.key '{}' \;
