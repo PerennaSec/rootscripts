@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#* Simple Script to create backup kernel on removable media. *#
+#* Best used after establishing a stable kernel config, in order to backup system functions in case of future outages. *#
+
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
