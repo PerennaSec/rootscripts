@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#* Handy script to update kernel configuration before saving to a backup location and signing to a new stub kernel *#
+
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
@@ -54,7 +56,9 @@ fi
 
 cd /usr/src/linux
 
-# begin kernel build
+#--------------------]
+# BEGIN KERNEL BUILD
+#--------------------]
 
 echo -e "Initiating Kernel Build ... \n"
 
