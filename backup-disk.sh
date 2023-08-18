@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#* Run basic, comprehensive system backup via the mkstage4 utility *#
+#* Be mindful of disk space! *#
+
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
